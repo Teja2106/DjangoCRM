@@ -91,7 +91,7 @@ else:
             'USER': 'teja',
             'PASSWORD': 'ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk',
             'HOST': 'dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com',
-        'PORT': '5432'
+            'PORT': '5432'
     }
 }
 
