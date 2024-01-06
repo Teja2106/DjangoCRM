@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = ['https://webcrm-darn.onrender.com']
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(' ')
 
 
 # Application definition
@@ -79,9 +79,10 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+databse_url = os.environ.get('DATABASE_URL')
 if not DEBUG:
     DATABASES = {
-        'default': dj_database_url.parse('postgres://teja:ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk@dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com/dcrm_vmx2')
+        'default': dj_database_url.parse(databse_url)
     }
 else:
     DATABASES = {
