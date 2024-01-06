@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -77,13 +79,18 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dcrm_vmx2',
-        'USER': 'teja',
-        'PASSWORD': 'ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk',
-        'HOST': 'postgres://teja:ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk@dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com/dcrm_vmx2',
+if not DEBUG:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'dcrm_vmx2',
+            'USER': 'teja',
+            'PASSWORD': 'ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk',
+            'HOST': 'postgres://teja:ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk@dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com/dcrm_vmx2',
         'PORT': '5432'
     }
 }
