@@ -87,10 +87,10 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'dcrm_vmx2',
-            'USER': 'teja',
-            'PASSWORD': 'ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk',
-            'HOST': 'postgres://teja:ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk@dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com/dcrm_vmx2',
+            'NAME': 'dcrm',
+            'USER': 'postgres',
+            'PASSWORD': 'shoyouwu',
+            'HOST': 'localhost',
         'PORT': '5432'
     }
 }
