@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'dcrm_vmx2',
         'USER': 'teja',
         'PASSWORD': 'ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk',
-        'HOST': 'dpg-cmcpfc821fec73cte0lg-a',
+        'HOST': 'http://dpg-cmcpfc821fec73cte0lg-a',
         'PORT': '5432'
     }
 }
