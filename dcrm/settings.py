@@ -81,16 +81,16 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 
 if not DEBUG:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse('postgres://teja:ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk@dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com/dcrm_vmx2')
     }
 else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'dcrm',
-            'USER': 'postgres',
-            'PASSWORD': 'shoyouwu',
-            'HOST': 'localhost',
+            'NAME': 'dcrm_vmx2',
+            'USER': 'teja',
+            'PASSWORD': 'ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk',
+            'HOST': 'dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com',
         'PORT': '5432'
     }
 }
