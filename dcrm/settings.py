@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'dcrm_vmx2',
         'USER': 'teja',
         'PASSWORD': 'ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk',
-        'HOST': 'http://dpg-cmcpfc821fec73cte0lg-a',
+        'HOST': 'postgres://teja:ntLbo7OKdO5eNcns4HPKeckV1mZAFiPk@dpg-cmcpfc821fec73cte0lg-a.singapore-postgres.render.com/dcrm_vmx2',
         'PORT': '5432'
     }
 }
